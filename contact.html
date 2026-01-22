@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<!--
+WRITTEN BY: Leqi Li
+EMAIL: leqil10@uci.edu
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Leqi Li">
+  <meta name="description" content="Contact Leqi Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <title>Leqi Li | Contact</title>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="index.html" aria-label="Go to homepage">
+          <span class="brand-name">Leqi Li</span>
+          <span class="brand-subtitle">Profile</span>
+        </a>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="projects.html">Projects / Research</a></li>
+          <li><a class="nav-link" href="cv.html">CV / About</a></li>
+          <li><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-switch" aria-label="Theme switcher">
+        <label class="sr-only" for="themeSelect">Theme</label>
+        <select id="themeSelect">
+            <option value="system">System</option>
+            <option value="classic">Classic (Light)</option>
+            <option value="plum">Plum (Dark)</option>
+            <option value="mint">Mint</option>
+        </select>
+      </div>
+      
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="section-lead">
+        <!-- TODO -->
+        If you’d like to connect, feel free to email me or use the form below.
+      </p>
+
+      <div class="two-col">
+        <section class="card" aria-labelledby="contact-form">
+          <h2 id="contact-form">Message Form</h2>
+          <p class="helper">
+            This form is included as an advanced HTML feature. It is accessible and keyboard-friendly.
+          </p>
+
+          <!-- For A1, no backend required. This just demonstrates semantic forms. -->
+          <form action="#" method="post">
+            <div class="form-row">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div>
+              <label for="topic">Topic</label>
+              <input id="topic" name="topic" type="text" placeholder="[e.g., research, collaboration]" required>
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">Submit (demo)</button>
+            <p class="helper"> Not yet connected the form to a service now, so it does not actually send messages.</p>
+          </form>
+        </section>
+
+        <aside class="card" aria-labelledby="contact-links">
+          <h2 id="contact-links">Links</h2>
+          <ul class="bullets">
+            <li><strong>Email:</strong> <a href="mailto:leqil10@uci.edu">leqil10@uci.edu</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/LLQllq7" target="_blank" rel="noopener">https://github.com/LLQllq7</a></li>
+            <li><strong>Google Scholar:</strong> <a href="#" target="_blank" rel="noopener">Not yet available</a></li>
+            <li><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">Not yet available</a></li>
+          </ul>
+
+          <h3>Location / Timezone</h3>
+          <p class="muted">Irvine, CA (PST)</p>
+
+          <figure class="hero-card">
+            <!-- Optional second image to strengthen “basic content” if you want -->
+            <img src="assets/Avocado.png"
+                 alt="Four cute cartoon avocados standing in a row on a white background, including whole and halved avocados with smiling faces and small legs"
+                 width="900"
+                 height="600">
+            <figcaption class="muted">Avocado — my favorite fruit</figcaption>
+          </figure>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© 2026 Leqi Li.</p>
+      <p class="muted"><a href="index.html">Home</a> • <a href="projects.html">Projects</a></p>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<!--
+WRITTEN BY: Leqi Li
+EMAIL: leqil10@uci.edu
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Leqi Li">
+  <meta name="description" content="Personal portfolio of Leqi Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font (allowed; remember to cite in readme resources) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Leqi Li | Home</title>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="index.html" aria-label="Go to homepage">
+          <span class="brand-name">Leqi Li</span>
+          <span class="brand-subtitle">Profile</span>
+        </a>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="projects.html">Projects / Research</a></li>
+          <li><a class="nav-link" href="cv.html">CV / About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-switch" aria-label="Theme switcher">
+        <label class="sr-only" for="themeSelect">Theme</label>
+        <select id="themeSelect">
+            <option value="system">System</option>
+            <option value="classic">Classic (Light)</option>
+            <option value="plum">Plum (Dark)</option>
+            <option value="mint">Mint</option>
+        </select>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 class="hero-title">Hi, I’m <span class="accent">Leqi Li</span>.</h1>
+          <p class="hero-lead">
+            <!-- Short intro -->
+            I'm an undergraduate student majoring in Computer Science with a passion for AI.
+          </p>
+
+          <ul class="quick-facts" aria-label="Quick facts">
+            <li><strong>Focus:</strong> LLMs, Agents, ML Systems</li>
+            <li><strong>Currently:</strong> Senior student at USTC, visiting student at UCI</li>
+            <li><strong>Open to:</strong> Research internships, research collaborations, PhD / MS opportunities</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="projects.html">View Projects</a>
+            <a class="btn" href="cv.html">Read CV / About</a>
+          </div>
+
+          <div class="link-row" aria-label="External links">
+            <!-- Replace with actual links, Google Scholar and LinkedIn not finished yet-->
+            <a class="pill" href="https://github.com/LLQllq7" target="_blank" rel="noopener">GitHub</a>
+            <a class="pill" href="#" target="_blank" rel="noopener">Google Scholar</a>
+            <a class="pill" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+
+        <figure class="hero-card">
+          <!-- Requirement: at least one image with descriptive alt -->
+          <img class="avatar"
+               src="assets/LLQ.jpg"
+               alt="Back view of Leqi Li standing in Yosemite National Park, with mountains below and sky above"
+               width="520"
+               height="520">
+          <figcaption class="muted">
+            I'm at Yosemite National Park, California
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <article class="card">
+          <h2>Research Interests</h2>
+          <p>
+            My current research interests lie in the areas of large language models (LLMs), autonomous agents, and machine learning systems. I am particularly fascinated by how LLMs can be optimized for efficiency and reliability, as well as their applications in building intelligent agents capable of performing complex tasks autonomously.
+          </p>
+
+          <ul class="bullets">
+            <li>Optimization of LLM Inference Efficiency.</li>
+            <li>LLM Capability and Reliability Improvement.</li>
+            <li>Building Efficient and Reliable Autonomous Agents.</li>
+          </ul>
+
+          <p class="muted">
+            See <a href="projects.html">Projects / Research</a> for details.
+          </p>
+        </article>
+
+        <aside class="card">
+          <h2>Highlights</h2>
+          <ul class="highlights">
+            <li>
+              <span class="tag">Now </span>
+              <div>
+                <strong>Current role/goal</strong>
+                <p class="muted">Work on multi-agent systems.</p>
+              </div>
+            </li>
+            <li>
+              <span class="tag">Work</span>
+              <div>
+                <strong>Project or paper title</strong>
+                <p class="muted">[Not yet.]</p>
+              </div>
+            </li>
+            <li>
+              <span class="tag">Fun </span>
+              <div>
+                <strong>Hobbies</strong>
+                <p class="muted">Hiking, traveling, snowboarding</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <p class="section-lead">
+          Pick 2–3 projects I want recruiters to see first. (Not finished yet.)
+        </p>
+
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>[Project 1 Title]</h3>
+            <p class="muted">[One-sentence description + what built.]</p>
+            <ul class="bullets">
+              <li>[Tech: e.g., Python / PyTorch / C++ / JS]</li>
+              <li>[Result: e.g., Pass@k, F1, latency improvement]</li>
+            </ul>
+            <p><a class="inline-link" href="projects.html#project-1">Read more →</a></p>
+          </article>
+
+          <article class="card">
+            <h3>[Project 2 Title]</h3>
+            <p class="muted">[One-sentence description.]</p>
+            <ul class="bullets">
+              <li>[Tech stack]</li>
+              <li>[Outcome/impact]</li>
+            </ul>
+            <p><a class="inline-link" href="projects.html#project-2">Read more →</a></p>
+          </article>
+
+          <article class="card">
+            <h3>[Project 3 Title]</h3>
+            <p class="muted">[One-sentence description.]</p>
+            <ul class="bullets">
+              <li>[Tech stack]</li>
+              <li>[Outcome/impact]</li>
+            </ul>
+            <p><a class="inline-link" href="projects.html#project-3">Read more →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Other Links</h2>
+        <p class="muted">
+          Now these are links help quickly run W3C validators for the current page.
+        </p>
+        <ul class="bullets">
+          <li>
+            <a href="http://validator.w3.org/check?uri=referer">W3C HTML Validator</a>
+          </li>
+          <li>
+            <!-- Note: CSS validator referer works when served; on local file, paste URL if hosted -->
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">W3C CSS Validator</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year">2026</span> Leqi Li. Built with HTML & CSS & JavaScript.</p>
+      <p class="muted">
+        <a href="contact.html">Contact</a> •
+        <a href="projects.html">Projects</a> •
+        <a href="cv.html">CV</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+</html>

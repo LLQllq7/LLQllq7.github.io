@@ -1,0 +1,630 @@
+/* ===== Theme system: System (default) + Manual override ===== */
+/* Theme names:
+   - classic: white background + black text
+   - plum: deep purple background + light mint text
+   - mint: pale green background + purple text
+*/
+
+:root {
+  /* ---- System default = classic (light) ---- */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f6f7fb;
+  --text: #111827;        /* near-black */
+  --muted: #4b5563;       /* gray */
+  --line: rgba(17, 24, 39, 0.16);
+
+  /* accents + UI */
+  --accent: #5b21b6;      /* purple */
+  --accent-2: #0f766e;    /* teal-green */
+  --ui: #0f766e;          /* main UI color (borders/buttons) */
+  --ui-soft: rgba(15, 118, 110, 0.14);
+  --ui-border: rgba(15, 118, 110, 0.40);
+
+  /* component backgrounds (NO hardcoded dark RGBA anymore) */
+  --header-bg: rgba(255, 255, 255, 0.78);
+  --alt-bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --table-bg: #ffffff;
+  --thead-bg: #eef2ff;
+  --input-bg: #ffffff;
+  --footer-bg: #ffffff;
+
+  --shadow: 0 10px 30px rgba(17, 24, 39, 0.10);
+  --radius: 16px;
+  --max: 1080px;
+
+  /* focus ring */
+  --focus: rgba(15, 118, 110, 0.35);
+
+  color-scheme: light;
+}
+
+/* ---- System dark = plum ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #120626;               /* deep plum */
+    --surface: #1a0b35;
+    --surface-2: #150a2c;
+
+    /* make green text a bit lighter/softer than your current one */
+    --text: #c9ffe0;             /* lighter mint text */
+    --muted: #a6f7cc;
+
+    --line: rgba(201, 255, 224, 0.18);
+
+    --accent: #c9ffe0;           /* green accent */
+    --accent-2: #d3b7ff;         /* lavender accent */
+
+    --ui: #8cf2c1;               /* UI green */
+    --ui-soft: rgba(140, 242, 193, 0.14);
+    --ui-border: rgba(140, 242, 193, 0.40);
+
+    --header-bg: rgba(18, 6, 38, 0.70);
+    --alt-bg: rgba(26, 11, 53, 0.55);
+    --card-bg: rgba(26, 11, 53, 0.70);
+    --table-bg: rgba(21, 10, 44, 0.55);
+    --thead-bg: rgba(26, 11, 53, 0.90);
+    --input-bg: rgba(21, 10, 44, 0.70);
+    --footer-bg: rgba(18, 6, 38, 0.72);
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --focus: rgba(201, 255, 224, 0.30);
+
+    color-scheme: dark;
+  }
+}
+
+/* ---- Manual override (works on top of system) ---- */
+/* If user selects a theme, we set <html data-theme="..."> */
+
+html[data-theme="classic"] {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f6f7fb;
+  --text: #111827;
+  --muted: #4b5563;
+  --line: rgba(17, 24, 39, 0.16);
+
+  --accent: #5b21b6;
+  --accent-2: #0f766e;
+
+  --ui: #0f766e;
+  --ui-soft: rgba(15, 118, 110, 0.14);
+  --ui-border: rgba(15, 118, 110, 0.40);
+
+  --header-bg: rgba(255, 255, 255, 0.78);
+  --alt-bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --table-bg: #ffffff;
+  --thead-bg: #eef2ff;
+  --input-bg: #ffffff;
+  --footer-bg: #ffffff;
+
+  --shadow: 0 10px 30px rgba(17, 24, 39, 0.10);
+  --focus: rgba(15, 118, 110, 0.35);
+
+  color-scheme: light;
+}
+
+html[data-theme="plum"] {
+  --bg: #120626;
+  --surface: #1a0b35;
+  --surface-2: #150a2c;
+
+  --text: #c9ffe0;
+  --muted: #a6f7cc;
+  --line: rgba(201, 255, 224, 0.18);
+
+  --accent: #c9ffe0;
+  --accent-2: #d3b7ff;
+
+  --ui: #8cf2c1;
+  --ui-soft: rgba(140, 242, 193, 0.14);
+  --ui-border: rgba(140, 242, 193, 0.40);
+
+  --header-bg: rgba(18, 6, 38, 0.70);
+  --alt-bg: rgba(26, 11, 53, 0.55);
+  --card-bg: rgba(26, 11, 53, 0.70);
+  --table-bg: rgba(21, 10, 44, 0.55);
+  --thead-bg: rgba(26, 11, 53, 0.90);
+  --input-bg: rgba(21, 10, 44, 0.70);
+  --footer-bg: rgba(18, 6, 38, 0.72);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --focus: rgba(201, 255, 224, 0.30);
+
+  color-scheme: dark;
+}
+
+/* Mint = your current pale green + purple */
+html[data-theme="mint"] {
+  --bg: #e8f6ee;
+  --surface: #f3fbf7;
+  --surface-2: #eaf7f0;
+
+  --text: #5b2b82;
+  --muted: #7b4aa6;
+
+  /* IMPORTANT: borders/tables/forms no longer gray */
+  --line: rgba(58, 168, 122, 0.35);
+
+  --accent: #7a2fd1;     /* purple */
+  --accent-2: #3aa87a;   /* green */
+
+  --ui: #3aa87a;         /* medium green UI (buttons/borders) */
+  --ui-soft: rgba(58, 168, 122, 0.18);
+  --ui-border: rgba(58, 168, 122, 0.48);
+
+  --header-bg: rgba(232, 246, 238, 0.82);
+  --alt-bg: rgba(58, 168, 122, 0.10);
+  --card-bg: rgba(243, 251, 247, 0.92);
+  --table-bg: rgba(243, 251, 247, 0.92);
+  --thead-bg: rgba(58, 168, 122, 0.16);
+  --input-bg: rgba(243, 251, 247, 0.95);
+  --footer-bg: rgba(232, 246, 238, 0.85);
+
+  --shadow: 0 10px 30px rgba(52, 18, 78, 0.10);
+  --focus: rgba(58, 168, 122, 0.35);
+
+  color-scheme: light;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background:
+    radial-gradient(1200px 500px at 10% 10%, color-mix(in srgb, var(--accent-2) 28%, transparent), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--accent-2);
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.accent {
+  color: var(--accent-2);
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+/* Header / Nav */
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--line);
+  z-index: 999;
+}
+
+.header-inner {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand-link {
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-name {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.brand-subtitle {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  border-color: var(--line);
+  background: rgba(17, 26, 51, 0.5);
+}
+
+.nav-link.active {
+  border-color: var(--green-ui);
+  background: rgba(58, 168, 122, 0.25);
+}
+
+/* Sections */
+.section {
+  padding: 56px 0;
+}
+
+.section.alt {
+  background: var(--alt-bg);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.section h2 {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+}
+
+.section-lead {
+  margin: 0 0 22px;
+  max-width: 70ch;
+  color: var(--muted);
+}
+
+/* Hero */
+.hero {
+  padding: 48px 0 10px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.hero-title {
+  margin: 0 0 10px;
+  font-size: 2.3rem;
+  line-height: 1.15;
+}
+
+.hero-lead {
+  margin: 0 0 14px;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.hero-card {
+  margin: 0;
+  padding: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.avatar {
+  border-radius: 18px;
+  border: 1px solid var(--ui-border);
+  background: var(--surface-2);
+}
+
+
+.quick-facts {
+  margin: 0 0 18px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 14px;
+}
+
+/* Buttons / Pills */
+.btn {
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--ui-border);
+  background: var(--ui-soft);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: color-mix(in srgb, var(--ui) 22%, transparent);
+}
+
+.btn.primary {
+  border-color: var(--ui);
+  background: color-mix(in srgb, var(--ui) 32%, transparent);
+  color: var(--text);
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid var(--ui-border);
+  background: color-mix(in srgb, var(--ui) 12%, transparent);
+  color: var(--text);
+}
+
+.pill:hover {
+  background: color-mix(in srgb, var(--ui) 22%, transparent);
+}
+
+/* Cards / Layout */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.cards-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 18px;
+  border: 1px solid var(--ui-border);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.bullets {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.inline-link {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(233, 236, 244, 0.25);
+}
+
+.inline-link:hover {
+  border-bottom-color: rgba(125, 255, 204, 0.7);
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.highlights li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--ui-border);
+  color: var(--muted);
+  background: color-mix(in srgb, var(--ui) 10%, transparent);
+}
+
+/* Tables (advanced feature support: readable by screen readers) */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--radius);
+  background: var(--table-bg);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  background: var(--table-bg);
+}
+
+caption {
+  text-align: left;
+  padding: 12px 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+}
+
+thead th {
+  border-top: none;
+  text-align: left;
+  background: var(--thead-bg);
+}
+
+tbody tr:hover {
+  background: color-mix(in srgb, var(--ui) 10%, transparent);
+}
+
+/* Forms (advanced feature) */
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--ui-border);
+  background: var(--input-bg);
+  color: var(--text);
+  font: inherit;
+}
+
+input:focus,
+textarea:focus,
+a:focus,
+button:focus,
+select:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.helper {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 36px;
+  padding: 24px 0;
+  background: var(--footer-bg);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-3 {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    min-width: 640px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-list {
+    justify-content: flex-start;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+.theme-switch select {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--ui-border);
+  background: color-mix(in srgb, var(--ui) 10%, transparent);
+  color: var(--text);
+}

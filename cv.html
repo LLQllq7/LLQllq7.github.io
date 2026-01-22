@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<!--
+WRITTEN BY: Leqi Li
+EMAIL: leqil10@uci.edu
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Leqi Li">
+  <meta name="description" content="CV and background of Leqi Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <title>Leqi Li | CV / About</title>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="index.html" aria-label="Go to homepage">
+          <span class="brand-name">Leqi Li</span>
+          <span class="brand-subtitle">Profile</span>
+        </a>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="projects.html">Projects / Research</a></li>
+          <li><a class="nav-link active" href="cv.html" aria-current="page">CV / About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-switch" aria-label="Theme switcher">
+        <label class="sr-only" for="themeSelect">Theme</label>
+        <select id="themeSelect">
+            <option value="system">System</option>
+            <option value="classic">Classic (Light)</option>
+            <option value="plum">Plum (Dark)</option>
+            <option value="mint">Mint</option>
+        </select>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>CV / About</h1>
+      <p class="section-lead">
+        A brief overview of my education, skills, and experience.
+      </p>
+
+      <div class="two-col">
+        <section class="card" aria-labelledby="education">
+          <h2 id="education">Education</h2>
+          <ul class="bullets">
+            <li><strong>University of Science and Technology of China</strong> — Bachelor of Computer Science, 2022-2026</li>
+            <li><strong>University of California, Irvine</strong> — GSTAR Program, 2025-2026</li>
+          </ul>
+
+          <h3>Selected Coursework</h3>
+          <ul class="bullets">
+            <li>[Course 1]</li>
+            <li>[Course 2]</li>
+            <li>[Course 3]</li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="skills">
+          <h2 id="skills">Skills</h2>
+          <ul class="bullets">
+            <li><strong>Languages:</strong> [e.g., Python, C++, Java, JavaScript]</li>
+            <li><strong>ML/AI:</strong> [e.g., PyTorch, Transformers, evaluation]</li>
+            <li><strong>Systems:</strong> [e.g., Linux, Git, Docker]</li>
+            <li><strong>Web:</strong> [HTML, CSS (this site)]</li>
+          </ul>
+
+          <h3>Download</h3>
+          <p class="muted">
+            <a href="assets/CV-Leqi_Li.pdf" target="_blank" rel="noopener">Download my CV (PDF)</a>
+          </p>
+        </section>
+      </div>
+
+      <section class="section alt">
+        <div class="container">
+          <h2>Experience</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>[Role / Position]</h3>
+              <p class="muted">[Org] • [Dates] • [Location]</p>
+              <ul class="bullets">
+                <li>[Impact bullet]</li>
+                <li>[Impact bullet]</li>
+                <li>[Impact bullet]</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>[Role / Position]</h3>
+              <p class="muted">[Org] • [Dates] • [Location]</p>
+              <ul class="bullets">
+                <li>[TODO]</li>
+                <li>[TODO]</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© 2026 Leqi Li.</p>
+      <p class="muted"><a href="projects.html">Projects</a> • <a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+
+</html>
