@@ -400,19 +400,45 @@ a:hover {
   color: var(--text);
 }
 
-.pill {
-  display: inline-block;
-  padding: 6px 10px;
-  border-radius: 999px;
-  text-decoration: none;
-  border: 1px solid var(--ui-border);
-  background: color-mix(in srgb, var(--ui) 12%, transparent);
-  color: var(--text);
+/* Icon links */
+.icon-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.pill:hover {
-  background: color-mix(in srgb, var(--ui) 22%, transparent);
+.icon-link {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  border: 1px solid var(--ui-border);
+  background: color-mix(in srgb, var(--ui) 12%, transparent);
+  color: var(--text); /* icon color via currentColor */
+
+  text-decoration: none;
 }
+
+.icon-link:hover {
+  background: color-mix(in srgb, var(--ui) 22%, transparent);
+  color: var(--accent); /* hover icon tint */
+}
+
+.icon-link:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 
 /* Cards / Layout */
 .two-col {
